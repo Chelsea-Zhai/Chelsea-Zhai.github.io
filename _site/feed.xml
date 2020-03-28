@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-03-27T19:25:03-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">牙牙的碎碎念</title><subtitle>This is where I write for myself.</subtitle><entry><title type="html">Test Post</title><link href="http://localhost:4000/2020/03/27/hello-world.html" rel="alternate" type="text/html" title="Test Post" /><published>2020-03-27T00:00:00-04:00</published><updated>2020-03-27T00:00:00-04:00</updated><id>http://localhost:4000/2020/03/27/hello-world</id><content type="html" xml:base="http://localhost:4000/2020/03/27/hello-world.html">&lt;h1 id=&quot;welcome&quot;&gt;Welcome&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Hello world&lt;/strong&gt;, this is my first Jekyll blog post.&lt;/p&gt;
+
+&lt;p&gt;I hope you like it!&lt;/p&gt;</content><author><name></name></author><summary type="html">Welcome</summary></entry></feed>
