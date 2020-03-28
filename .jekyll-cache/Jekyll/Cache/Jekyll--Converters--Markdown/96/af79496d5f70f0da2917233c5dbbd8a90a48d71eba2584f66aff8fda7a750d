@@ -1,0 +1,31 @@
+I"6<h1 id="should-contain-all-postsh1-classpage-headingblogh1">Should contain all posts.&lt;h1 class="page-heading"&gt;Blog&lt;/h1&gt;<style type="text/css" media="screen"></style></h1>
+<p>.container {
+    margin: 10px auto;
+    max-width: 600px;
+    text-align: center;
+  }
+  h1 {
+    margin: 30px 0;
+    font-size: 4em;
+    line-height: 1;
+    letter-spacing: -1px;
+  }
+&lt;/style&gt;</p>
+
+<div class="container">
+  <h1>404</h1>
+
+  <p><strong>Page not found :(</strong></p>
+  <p>The requested page could not be found.</p>
+</div>
+<h2 class="post-list-heading">Posts</h2>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;ul class="post-list"&gt;&lt;li&gt;&lt;span class="post-meta"&gt;Mar 27, 2020&lt;/span&gt;
+    &lt;h3&gt;
+      &lt;a class="post-link" href="/2020/03/27/%E5%86%AC%E6%98%A5%E5%A4%8F%E6%B2%A1%E6%9C%89%E7%A7%8B.html"&gt;
+        冬春夏没有秋
+      &lt;/a&gt;
+    &lt;/h3&gt;&lt;/li&gt;&lt;/ul&gt;
+
+&lt;p class="rss-subscribe"&gt;subscribe &lt;a href="/feed.xml"&gt;via RSS&lt;/a&gt;&lt;/p&gt;
+</code></pre></div></div>
+:ET
