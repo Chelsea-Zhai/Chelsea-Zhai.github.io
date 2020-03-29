@@ -1,6 +1,6 @@
 ---
 layout: review
-title: 📚Book/Flim Review
+title: Book/Flim Review
 permalink: /Review/
 ---
 
