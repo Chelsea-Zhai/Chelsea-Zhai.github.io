@@ -1,8 +1,8 @@
 ---
 layout: default
 ---
-    <h2 class="post-list-heading">{{ page.list_title | default: "Book & Film Reviews" }}</h2>
-    {% assign mydocs = site.review | group_by: 'category' %}
+    <h2 class="post-list-heading">{{ page.list_title | default: "Travel Journals" }}</h2>
+    {% assign mydocs = site.travel | group_by: 'category' %}
     {% for cat in mydocs %}
     <h3>{{ cat.name | capitalize }}</h3>
     <ul>

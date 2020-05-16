@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: 博文
+title: 杂文
 permalink: /Blog/
 ---
 
