@@ -49,7 +49,7 @@ layout: default
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         <span class="post-meta">{{ review.date | date: date_format }}</span>
         <h3>
-          <a class="post-link" href="{{ travel.url | relative_url }}">
+          <a class="post-link" href="{{ review.url | relative_url }}">
             {{ review.title | escape }}
           </a>
         </h3>
