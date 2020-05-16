@@ -1,6 +1,6 @@
 ---
 layout: travel_journals
-title: Travel Journals
+title: 旅行手记
 permalink: /Travel/
 ---
 
