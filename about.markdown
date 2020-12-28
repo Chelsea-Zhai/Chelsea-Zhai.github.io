@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-> 本职看书、画画、写字，副业股票衍生品交易
+> 本职看书、画画、写字，副业quant
 
 
 
