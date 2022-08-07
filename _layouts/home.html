@@ -3,66 +3,37 @@ layout: default
 ---
 
 <div class="home">
-  {%- if page.title -%}
+  {% if page.title %}
     <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
+  {% endif %}
 
   {{ content }}
 
-  {%- if site.posts.size > 0 -%}
+  {% if site.posts.size > 0 %}
+    {% assign travel_post = site.travel %}
+    {% assign feeling_post = site.posts %}
+    {% assign review_post = site.review %}
+    {% assign all_posts = travel_post | concat: feeling_post | concat: review_post %}
+    {% assign all_posts_sorted = all_posts | sort: "date" | reverse %}
     <ul class="post-list">
-      <h2 class="post-list-heading">{{ page.list_title | default: "Some Journeys" }}</h2>
-      {%- for travel in site.travel -%}
+      <h2 class="post-list-heading">{{ page.list_title | default: "所有最新文章：" }}</h2>
+      {% for post in all_posts_sorted %}
       <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ travel.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ travel.url | relative_url }}">
-            {{ travel.title | escape }}
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ travel.excerpt }}
-        {%- endif -%}
-      </li>
-      {%- endfor -%}
-      <br>
-      <h2 class="post-list-heading">{{ page.list_title | default: "Some Feelings" }}</h2>
-      {%- for post in site.posts -%}
-      <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
         <span class="post-meta">{{ post.date | date: date_format }}</span>
         <h3>
           <a class="post-link" href="{{ post.url | relative_url }}">
             {{ post.title | escape }}
           </a>
         </h3>
-        {%- if site.show_excerpts -%}
+        {% if site.show_excerpts %}
           {{ post.excerpt }}
-        {%- endif -%}
+        {% endif %}
       </li>
-      {%- endfor -%}
-      <br>
-      <h2 class="post-list-heading">{{ page.list_title | default: "Some Books and Films" }}</h2>
-      {%- for review in site.review -%}
-      <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ review.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ review.url | relative_url }}">
-            {{ review.title | escape }}
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ review.excerpt }}
-        {%- endif -%}
-      </li>
-      {%- endfor -%}
-
-      
+      {% endfor %}
     </ul>
 
     <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-  {%- endif -%}
+  {% endif %}
 
 </div>
