@@ -2,7 +2,7 @@ name: Deploy Astro to GitHub Pages
 
 on:
   push:
-    branches: [astro-migration]
+    branches: [new-ui]
   workflow_dispatch:
 
 permissions:
