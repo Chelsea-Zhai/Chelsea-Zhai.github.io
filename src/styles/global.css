@@ -53,8 +53,8 @@ html.dark {
 */
 
 @theme inline {
-    --font-sans: 'Inter Variable', sans-serif;
-    --font-serif: 'Newsreader Variable', serif;
+    --font-sans: 'Inter Variable', 'Noto Serif SC', sans-serif;
+    --font-serif: 'Newsreader Variable', 'Noto Serif SC', serif;
     --text-color-main: var(--text-main);
     --background-color-main: var(--bg-main);
     --background-color-muted: var(--bg-muted);

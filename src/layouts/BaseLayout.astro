@@ -22,7 +22,7 @@ const { showHeader = true, ...head } = Astro.props;
         <ClientRouter />
         <script is:inline src="/theme-toggle.js"></script>
     </head>
-    <body class="bg-main text-main">
+    <body class="bg-main text-main font-serif">
         <div class="flex min-h-screen flex-col px-4 md:px-8">
             <Nav />
             {showHeader && <Header />}
