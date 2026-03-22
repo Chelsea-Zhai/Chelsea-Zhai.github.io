@@ -18,7 +18,6 @@ const siteConfig: SiteConfig = {
         { text: 'GitHub', href: 'https://github.com/Chelsea-Zhai' }
     ],
     hero: {
-        title: '☕️一杯咖啡和一个下午',
         text: 'Here is where I write for myself.'
     },
     postsPerPage: 8
