@@ -46,7 +46,11 @@ const { Content } = await render(post);
                 }
             </div>
         </header>
-        <div class="prose sm:prose-lg max-w-none">
+        <div class="flex justify-end mb-4 gap-2">
+            <button id="font-decrease" class="text-sm px-2 py-1 border border-current rounded hover:opacity-60" aria-label="Decrease font size">A−</button>
+            <button id="font-increase" class="text-sm px-2 py-1 border border-current rounded hover:opacity-60" aria-label="Increase font size">A+</button>
+        </div>
+        <div id="post-content" class="prose sm:prose-lg max-w-none">
             <Content />
         </div>
         <div class="mt-8 flex flex-wrap items-center justify-between gap-6 text-sm sm:mt-12 sm:text-base">
@@ -82,7 +86,30 @@ const { Content } = await render(post);
 </BaseLayout>
 
 <script>
+    const SIZES = ['0.85rem', '1rem', '1.2rem', '1.4rem'];
+    const DEFAULT = 1;
+
     document.addEventListener('astro:page-load', () => {
+        const content = document.getElementById('post-content');
+        const decrease = document.getElementById('font-decrease') as HTMLButtonElement;
+        const increase = document.getElementById('font-increase') as HTMLButtonElement;
+
+        if (!content || !decrease || !increase) return;
+
+        let current = parseInt(localStorage.getItem('fontSize') || String(DEFAULT));
+
+        function applySize(index: number) {
+            content!.style.fontSize = SIZES[index];
+            decrease!.disabled = index === 0;
+            increase!.disabled = index === SIZES.length - 1;
+            localStorage.setItem('fontSize', String(index));
+        }
+
+        applySize(current);
+
+        decrease.addEventListener('click', () => { if (current > 0) applySize(--current); });
+        increase.addEventListener('click', () => { if (current < SIZES.length - 1) applySize(++current); });
+
         const copyUrlButton = document.querySelector('.copy-url-button') as HTMLButtonElement;
         copyUrlButton?.addEventListener('click', async () => {
             await copyUrl(copyUrlButton);
